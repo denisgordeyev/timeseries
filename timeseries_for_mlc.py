@@ -209,7 +209,6 @@ def timeseriesCVscore(x):
  
     return np.mean(np.array(errors))
     
-%%time
 data = dataset.Users[:-500]
 
 opt = minimize(timeseriesCVscore, x0=x, method="TNC", bounds = ((0, 1), (0, 1), (0, 1)))
@@ -300,7 +299,6 @@ parameters = product(ps, qs, Ps, Qs)
 parameters_list = list(parameters)
 len(parameters_list)
 
-%%time
 results = []
 best_aic = float("inf")
 
